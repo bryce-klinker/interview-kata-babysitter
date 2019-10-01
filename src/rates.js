@@ -1,11 +1,11 @@
 export function getRatesForFamily(family) {
   if (family === 'B') {
     return [
-      // {hour: 17, rate: 12},
-      // {hour: 18, rate: 12},
-      // {hour: 19, rate: 12},
-      // {hour: 20, rate: 12},
-      // {hour: 21, rate: 12},
+      {hour: 17, rate: 12},
+      {hour: 18, rate: 12},
+      {hour: 19, rate: 12},
+      {hour: 20, rate: 12},
+      {hour: 21, rate: 12},
       {hour: 22, rate: 8},
       {hour: 23, rate: 8}
     ];
