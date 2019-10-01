@@ -8,9 +8,13 @@
   "private": true,
   "scripts": {
     "test": "nyc ava",
-    "cucumber": "yarn cucumber-js"
+    "cucumber": "cucumber-js --require-module @babel/register"
   },
   "devDependencies": {
+    "@babel/core": "7.6.2",
+    "@babel/polyfill": "7.6.0",
+    "@babel/preset-env": "7.6.2",
+    "@babel/register": "7.6.2",
     "ava": "2.4.0",
     "chai": "4.2.0",
     "cucumber": "5.1.0",
