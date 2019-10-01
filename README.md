@@ -25,3 +25,13 @@ The job:
 
 Deliverable:
 - Calculate total pay, based on babysitter start and end time, and a family.
+
+## Assumptions
+
+### Unknown Family
+
+If a baby sitter is asked to baby sit for an unknown family the default rates below will be used:
+
+```$xslt
+Default rates: $20 per hour regardless of time
+``` 
