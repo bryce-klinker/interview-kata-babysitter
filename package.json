@@ -6,7 +6,11 @@
   "author": "Bryce Klinker <bklinker@pillartechnology.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "nyc ava"
+  },
   "devDependencies": {
-    "ava": "2.4.0"
+    "ava": "2.4.0",
+    "nyc": "14.1.1"
   }
 }
