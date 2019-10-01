@@ -1,21 +1,5 @@
-export function getRatesForFamily(family) {
-  if (family === 'B') {
-    return [
-      {hour: 17, rate: 12},
-      {hour: 18, rate: 12},
-      {hour: 19, rate: 12},
-      {hour: 20, rate: 12},
-      {hour: 21, rate: 12},
-      {hour: 22, rate: 8},
-      {hour: 23, rate: 8},
-      {hour: 0, rate: 16},
-      {hour: 1, rate: 16},
-      {hour: 2, rate: 16},
-      {hour: 3, rate: 16},
-    ];
-  }
-
-  return [
+const families = {
+  'A': [
     {hour: 17, rate: 15},
     {hour: 18, rate: 15},
     {hour: 19, rate: 15},
@@ -27,5 +11,26 @@ export function getRatesForFamily(family) {
     {hour: 1, rate: 20},
     {hour: 2, rate: 20},
     {hour: 3, rate: 20},
-  ];
+  ],
+  'B': [
+    {hour: 17, rate: 12},
+    {hour: 18, rate: 12},
+    {hour: 19, rate: 12},
+    {hour: 20, rate: 12},
+    {hour: 21, rate: 12},
+    {hour: 22, rate: 8},
+    {hour: 23, rate: 8},
+    {hour: 0, rate: 16},
+    {hour: 1, rate: 16},
+    {hour: 2, rate: 16},
+    {hour: 3, rate: 16},
+  ]
+};
+
+export function getRatesForFamily(family) {
+  if (families.hasOwnProperty(family)) {
+    return families[family];
+  }
+
+  return families['A'];
 }
