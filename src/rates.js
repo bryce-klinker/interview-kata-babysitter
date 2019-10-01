@@ -1,4 +1,4 @@
-const families = {
+const knownFamilies = {
   'A': [
     {hour: 17, rate: 15},
     {hour: 18, rate: 15},
@@ -42,8 +42,8 @@ const defaultRates = [
 ];
 
 export function getRatesForFamily(family) {
-  if (families.hasOwnProperty(family)) {
-    return families[family];
+  if (knownFamilies.hasOwnProperty(family)) {
+    return knownFamilies[family];
   }
 
   return defaultRates;
