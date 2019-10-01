@@ -6,8 +6,12 @@ export function getRatesForFamily(family) {
       {hour: 19, rate: 12},
       {hour: 20, rate: 12},
       {hour: 21, rate: 12},
-      // {hour: 22, rate: 8},
-      // {hour: 23, rate: 8}
+      {hour: 22, rate: 8},
+      {hour: 23, rate: 8},
+      {hour: 0, rate: 16},
+      {hour: 1, rate: 16},
+      {hour: 2, rate: 16},
+      {hour: 3, rate: 16},
     ];
   }
 
