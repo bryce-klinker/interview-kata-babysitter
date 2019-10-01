@@ -7,10 +7,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "nyc ava"
+    "test": "nyc ava",
+    "cucumber": "yarn cucumber-js"
   },
   "devDependencies": {
     "ava": "2.4.0",
+    "chai": "4.2.0",
+    "cucumber": "5.1.0",
     "nyc": "14.1.1"
   }
 }
