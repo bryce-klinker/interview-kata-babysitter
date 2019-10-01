@@ -14,5 +14,5 @@ When(/^I leave at '(.*)'$/, function (time) {
 });
 
 Then(/^I should charge '(.*)' for the night$/, function (total) {
-
+  return 'pending';
 });
