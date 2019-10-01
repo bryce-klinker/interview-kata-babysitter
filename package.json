@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "test": "nyc ava",
+    "test:watch": "nyc ava --watch",
     "cucumber": "cucumber-js --require-module @babel/register"
   },
   "devDependencies": {

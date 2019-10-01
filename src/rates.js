@@ -1,3 +1,5 @@
 export function getRatesForFamily() {
-  return [];
+  return [
+    { hour: 17, rate: 15 }
+  ];
 }
