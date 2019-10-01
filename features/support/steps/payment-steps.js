@@ -1,6 +1,6 @@
-const {Given, When, Then,} = require('cucumber');
-const {expect} = require('chai');
-const {calculatePayment} = require('../../../src/baby-sitter');
+import {Given, When, Then} from 'cucumber';
+import {expect} from 'chai';
+import {calculatePayment} from '../../../src/baby-sitter';
 
 const options = {
   arrivalTime: null,
