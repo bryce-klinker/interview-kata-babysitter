@@ -19,5 +19,10 @@
     "chai": "4.2.0",
     "cucumber": "5.1.0",
     "nyc": "14.1.1"
+  },
+  "ava": {
+    "require": [
+      "@babel/register"
+    ]
   }
 }
