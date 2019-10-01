@@ -4,13 +4,13 @@ import {getRatesForFamily} from "./rates";
 
 test('Given family A when get rates then $15 per hour before 11:00 PM', t => {
   const rates = getRatesForFamily('A');
+
   expect(rates).to.deep.include({hour:17, rate: 15});
-  // t.deepEqual({hour: 17, rate: 15}, rates[0]);
-  t.deepEqual({hour: 18, rate: 15}, rates[1]);
-  t.deepEqual({hour: 19, rate: 15}, rates[2]);
-  t.deepEqual({hour: 20, rate: 15}, rates[3]);
-  t.deepEqual({hour: 21, rate: 15}, rates[4]);
-  t.deepEqual({hour: 22, rate: 15}, rates[5]);
+  expect(rates).to.deep.include({hour:18, rate: 15});
+  expect(rates).to.deep.include({hour:19, rate: 15});
+  expect(rates).to.deep.include({hour:20, rate: 15});
+  expect(rates).to.deep.include({hour:21, rate: 15});
+  expect(rates).to.deep.include({hour:22, rate: 15});
 });
 
 test('Given family A when get rates then $20 per hour after 11:00 PM', t => {
