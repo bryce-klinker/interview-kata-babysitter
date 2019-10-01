@@ -11,3 +11,12 @@ test('Given family A when get rates then $15 per hour before 11:00 PM', t => {
   t.deepEqual({ hour: 22, rate: 15 }, rates[5]);
 });
 
+test('Given family A when get rates then $20 per hour after 11:00 PM', t => {
+  const rates = getRatesForFamily('A');
+  t.deepEqual({ hour: 23, rate: 20 }, rates[6]);
+  t.deepEqual({ hour: 0, rate: 20 }, rates[7]);
+  t.deepEqual({ hour: 1, rate: 20 }, rates[8]);
+  t.deepEqual({ hour: 2, rate: 20 }, rates[9]);
+  t.deepEqual({ hour: 3, rate: 20 }, rates[10]);
+});
+
