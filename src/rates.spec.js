@@ -36,7 +36,7 @@ test('Given family B when get rates then $12 per hour before 10:00 PM', t => {
 test('Given family B when get rates then $8 per hour between 10:00 PM and 12:00 AM', t => {
   const rates = getRatesForFamily('B');
 
-  t.deepEqual({hour: 22, rate: 8}, rates[5]);
-  t.deepEqual({hour: 23, rate: 8}, rates[6]);
+  expect(rates).to.deep.include({hour: 22, rate: 8});
+  expect(rates).to.deep.include({hour: 23, rate: 8});
 });
 
