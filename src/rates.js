@@ -27,10 +27,24 @@ const families = {
   ]
 };
 
+const defaultRates = [
+  {hour: 17, rate: 20},
+  {hour: 18, rate: 20},
+  {hour: 19, rate: 20},
+  {hour: 20, rate: 20},
+  {hour: 21, rate: 20},
+  {hour: 22, rate: 20},
+  {hour: 23, rate: 20},
+  {hour: 0, rate: 20},
+  {hour: 1, rate: 20},
+  {hour: 2, rate: 20},
+  {hour: 3, rate: 20},
+];
+
 export function getRatesForFamily(family) {
   if (families.hasOwnProperty(family)) {
     return families[family];
   }
 
-  return families['A'];
+  return defaultRates;
 }
