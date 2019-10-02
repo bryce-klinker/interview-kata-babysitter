@@ -35,3 +35,10 @@ If a baby sitter is asked to baby sit for an unknown family the default rates be
 ```$xslt
 Default rates: $20 per hour regardless of time
 ``` 
+
+## Issues
+
+### Code Coverage
+
+Code coverage has been added however the coverage tool seems to think that a branch hasn't been covered
+in a file with no branching logic. Not sure why this is happening.

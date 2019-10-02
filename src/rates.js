@@ -24,6 +24,12 @@ const knownFamilies = {
     {hour: 1, rate: 16},
     {hour: 2, rate: 16},
     {hour: 3, rate: 16},
+  ],
+  'C': [
+    {hour: 17, rate: 21},
+    {hour: 18, rate: 21},
+    {hour: 19, rate: 21},
+    {hour: 20, rate: 21},
   ]
 };
 
