@@ -3,14 +3,14 @@ import {expect} from 'chai';
 import {calculatePayment} from '../../../src/baby-sitter';
 
 const options = {
-  arrivalTime: null,
+  startTime: null,
   family: null,
-  leaveTime: null
+  endTime: null
 };
 let actualTotal = null;
 
 Given(/^I arrive at '(.*)'$/, function (time) {
-  options.arrivalTime = time;
+  options.startTime = time;
 });
 
 Given(/^I am working for family '(.*)'$/, function (family) {
@@ -18,7 +18,7 @@ Given(/^I am working for family '(.*)'$/, function (family) {
 });
 
 When(/^I leave at '(.*)'$/, function (time) {
-  options.leaveTime = time;
+  options.endTime = time;
   actualTotal = calculatePayment(options);
 });
 
