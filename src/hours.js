@@ -3,7 +3,7 @@ export function getHoursWorked(startTime, endTime) {
     return [19, 20, 21, 22, 23, 0];
   }
   if (startTime === '7:00 PM') {
-    return [18, 19, 20, 21, 22, 23];
+    return [19, 20, 21, 22, 23];
   }
   return [17, 18, 19, 20, 21, 22];
 }

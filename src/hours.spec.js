@@ -16,6 +16,7 @@ test('When start time is 5:00 PM and end time is 11:00 PM then hours between 5:0
 test('When start time is 7:00 PM and end time is 12:00 AM then hours between 7:00 PM and 12:00 AM returned', () => {
   const hoursWorked = getHoursWorked('7:00 PM', '12:00 AM');
 
+  expect(hoursWorked).not.to.include(18);
   expect(hoursWorked).to.include(19);
   expect(hoursWorked).to.include(20);
   expect(hoursWorked).to.include(21);
