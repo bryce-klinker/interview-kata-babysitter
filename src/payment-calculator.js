@@ -1,4 +1,4 @@
-export function calculatePaymentAmount(hoursWorked) {
-  const total = hoursWorked.length * 15;
+export function calculatePaymentAmount(hoursWorked, rates) {
+  const total = rates.reduce((p, r) => p + r.rate, 0);
   return `$${total}`;
 }
