@@ -27,4 +27,5 @@ test('Given time when get hour then hour is in military', () => {
   expect(getHour('5:00 PM')).to.equal(17);
   expect(getHour('7:00 PM')).to.equal(19);
   expect(getHour('9:00 PM')).to.equal(21);
+  expect(getHour('11:00 PM')).to.equal(23);
 });

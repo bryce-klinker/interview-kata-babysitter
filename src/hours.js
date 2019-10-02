@@ -6,6 +6,7 @@ export function getHoursWorked(startTime) {
 }
 
 export function getHour(time) {
-  const amPmHour = Number(time.substr(0, 1));
+  const colonIndex = time.indexOf(':');
+  const amPmHour = Number(time.substr(0, colonIndex));
   return amPmHour + 12;
 }
