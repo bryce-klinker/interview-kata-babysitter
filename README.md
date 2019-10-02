@@ -1,5 +1,25 @@
 # Babysitter Kata
 
+## Requirements
+
+- Node 10.15.2 or greater
+- Yarn 1.17.3 or greater
+
+## Run Tests
+
+From the terminal/command line:
+
+```bash
+cd kata-babysitter
+
+yarn install
+
+yarn test # runs unit tests
+
+yarn cucumber # runs cucumber tests
+```
+
+
 ## Background
 This kata simulates a babysitter working and getting paid for one night.  The rules are pretty straight forward.
 
@@ -32,7 +52,7 @@ Deliverable:
 
 If a baby sitter is asked to baby sit for an unknown family the default rates below will be used:
 
-```$xslt
+```text
 Default rates: $20 per hour regardless of time
 ``` 
 

@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "nyc ava",
+    "test": "ava",
     "test:watch": "yarn test --watch",
     "cucumber": "cucumber-js --require-module @babel/register"
   },
