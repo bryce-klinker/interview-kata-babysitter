@@ -62,3 +62,9 @@ Default rates: $20 per hour regardless of time
 
 Code coverage has been added however the coverage tool seems to think that a branch hasn't been covered
 in a file with no branching logic. Not sure why this is happening.
+
+You can run code coverage using:
+
+```bash
+yarn nyc ava
+```
