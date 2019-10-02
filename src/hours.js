@@ -4,3 +4,7 @@ export function getHoursWorked(startTime) {
   }
   return [17, 18, 19, 20, 21, 22];
 }
+
+export function getHour() {
+  return 17;
+}
