@@ -51,5 +51,4 @@ test('When one hour worked at $15 and second hour worked at $30 then payment is 
   const payment = calculatePaymentAmount(hoursWorked, rates);
 
   expect(payment).to.equal('$45');
-
 });
