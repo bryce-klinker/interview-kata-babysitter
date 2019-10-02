@@ -18,7 +18,16 @@ const fifteenDollarFlatRate = [
 
 test('When one hour worked and rate is $15 per hour then payment is $15', () => {
   const hoursWorked = [17];
+
   const payment = calculatePaymentAmount(hoursWorked, fifteenDollarFlatRate);
 
   expect(payment).to.equal('$15');
 });
+
+test('When two hours worked and rate is $15 per hour then payment is $30', () => {
+  const hoursWorked = [17, 18];
+
+  const payment = calculatePaymentAmount(hoursWorked, fifteenDollarFlatRate);
+
+  expect(payment).to.equal('$30');
+})
