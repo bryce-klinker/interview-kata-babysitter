@@ -8,6 +8,9 @@ export function getHoursWorked(startTime) {
 export function getHour(time) {
   const colonIndex = time.indexOf(':');
   const isAm = time.indexOf('AM') > -1;
-  const amPmHour = Number(time.substr(0, colonIndex));
+  let amPmHour = Number(time.substr(0, colonIndex));
+  if (amPmHour === 12) {
+    amPmHour -= 12;
+  }
   return isAm ? amPmHour : amPmHour + 12;
 }
