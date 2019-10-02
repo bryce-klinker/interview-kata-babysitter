@@ -1,10 +1,11 @@
 function collectHoursWorked(startHour, endHour) {
   const hoursWorked = [];
-  while (startHour !== endHour) {
-    hoursWorked.push(startHour);
-    startHour++;
-    if (startHour === 24) {
-      startHour = 0;
+  let currentHour = startHour;
+  while (currentHour !== endHour) {
+    hoursWorked.push(currentHour);
+    currentHour++;
+    if (currentHour === 24) {
+      currentHour = 0;
     }
   }
   return hoursWorked;
