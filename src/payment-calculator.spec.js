@@ -30,4 +30,4 @@ test('When two hours worked and rate is $15 per hour then payment is $30', () =>
   const payment = calculatePaymentAmount(hoursWorked, fifteenDollarFlatRate);
 
   expect(payment).to.equal('$30');
-})
+});
