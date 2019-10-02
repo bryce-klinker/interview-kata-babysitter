@@ -53,6 +53,23 @@ test('When start time is 7:00 PM and end time is 1:00 AM then hours between 7:00
   expect(hoursWorked).not.to.include(3);
 });
 
+test('When start time is 5:00 PM and end time is 1:00 AM then hours between 5:00 PM and 1:00 AM are returned', () => {
+  const hoursWorked = getHoursWorked('5:00 PM', '1:00 AM');
+
+  expect(hoursWorked).to.include(17);
+  expect(hoursWorked).to.include(18);
+  expect(hoursWorked).to.include(19);
+  expect(hoursWorked).to.include(20);
+  expect(hoursWorked).to.include(21);
+  expect(hoursWorked).to.include(22);
+  expect(hoursWorked).to.include(23);
+  expect(hoursWorked).to.include(0);
+
+  expect(hoursWorked).not.to.include(1);
+  expect(hoursWorked).not.to.include(2);
+  expect(hoursWorked).not.to.include(3);
+});
+
 test('Given time when get hour then hour is in military', () => {
   expect(getHour('5:00 PM')).to.equal(17);
   expect(getHour('7:00 PM')).to.equal(19);

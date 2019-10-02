@@ -1,11 +1,16 @@
 export function getHoursWorked(startTime, endTime) {
-  if (startTime === '7:00 PM' && endTime !== '1:00 AM') {
-    return [19, 20, 21, 22, 23];
+  let currentHour = getHour(startTime);
+  const endHour = getHour(endTime);
+
+  const hoursWorked = [];
+  while(currentHour !== endHour) {
+    hoursWorked.push(currentHour);
+    currentHour++;
+    if (currentHour === 24) {
+      currentHour = 0;
+    }
   }
-  if (startTime === '5:00 PM') {
-    return [17, 18, 19, 20, 21, 22];
-  }
-  return [19, 20, 21, 22, 23, 0];
+  return hoursWorked;
 }
 
 export function getHour(time) {
