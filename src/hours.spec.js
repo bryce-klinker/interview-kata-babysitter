@@ -26,4 +26,5 @@ test('When start time is 7:00 PM and end time is 12:00 AM then hours between 7:0
 test('Given time when get hour then hour is in military', () => {
   expect(getHour('5:00 PM')).to.equal(17);
   expect(getHour('7:00 PM')).to.equal(19);
+  expect(getHour('9:00 PM')).to.equal(21);
 });

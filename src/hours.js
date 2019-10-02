@@ -9,5 +9,8 @@ export function getHour(time) {
   if (time === '7:00 PM') {
     return 19;
   }
+  if (time === '9:00 PM') {
+    return 21;
+  }
   return 17;
 }
