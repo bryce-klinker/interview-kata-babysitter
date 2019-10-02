@@ -5,7 +5,7 @@ export function getHoursWorked(startTime, endTime) {
   if (startTime === '5:00 PM') {
     return [17, 18, 19, 20, 21, 22];
   }
-  return [17, 18, 19, 20, 21, 22, 23, 0, 1, 2, 3];
+  return [19, 20, 21, 22, 23, 0];
 }
 
 export function getHour(time) {
