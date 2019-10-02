@@ -11,17 +11,22 @@ function collectHoursWorked(startHour, endHour) {
   return hoursWorked;
 }
 
-export function getHoursWorked(startTime, endTime) {
+function validateTimes(startTime, endTime) {
   const startHour = getHour(startTime);
   const endHour = getHour(endTime);
 
   if (startHour < 17) {
     throw `A start time of ${startTime} is not allowed`;
   }
-  if (endHour === 5) {
+  if (endHour > 4 && endHour < 17) {
     throw `An end time of ${endTime} is not allowed`;
   }
-  return collectHoursWorked(startHour, endHour);
+}
+
+export function getHoursWorked(startTime, endTime) {
+  validateTimes(startTime, endTime);
+
+  return collectHoursWorked(getHour(startTime), getHour(endTime));
 }
 
 export function getHour(time) {
