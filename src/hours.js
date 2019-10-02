@@ -6,11 +6,6 @@ export function getHoursWorked(startTime) {
 }
 
 export function getHour(time) {
-  if (time === '7:00 PM') {
-    return 19;
-  }
-  if (time === '9:00 PM') {
-    return 21;
-  }
-  return 17;
+  const amPmHour = Number(time.substr(0, 1));
+  return amPmHour + 12;
 }
