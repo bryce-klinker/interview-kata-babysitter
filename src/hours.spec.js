@@ -37,6 +37,10 @@ test('When start time is before 5:00 PM then error is raised', () => {
   expect(() => getHoursWorked('3:00 PM', '11:00 PM')).to.throw('A start time of 3:00 PM is not allowed');
 });
 
+test('When end time is after 4:00 AM then error is raised', () => {
+  expect(() => getHoursWorked('5:00 PM', '5:00 AM')).to.throw('An end time of 5:00 AM is not allowed');
+});
+
 test('Given time when get hour then hour is in military', () => {
   expect(getHour('5:00 PM')).to.equal(17);
   expect(getHour('7:00 PM')).to.equal(19);

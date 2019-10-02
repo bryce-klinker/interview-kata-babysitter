@@ -13,10 +13,14 @@ function collectHoursWorked(startHour, endHour) {
 
 export function getHoursWorked(startTime, endTime) {
   const startHour = getHour(startTime);
+  const endHour = getHour(endTime);
+
   if (startHour < 17) {
     throw `A start time of ${startTime} is not allowed`;
   }
-  const endHour = getHour(endTime);
+  if (endHour === 5) {
+    throw `An end time of ${endTime} is not allowed`;
+  }
   return collectHoursWorked(startHour, endHour);
 }
 
