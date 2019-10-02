@@ -1,5 +1,8 @@
 export function getHoursWorked(startTime, endTime) {
   let currentHour = getHour(startTime);
+  if (currentHour < 17) {
+    throw `A start time of ${startTime} is not allowed`;
+  }
   const endHour = getHour(endTime);
 
   const hoursWorked = [];
