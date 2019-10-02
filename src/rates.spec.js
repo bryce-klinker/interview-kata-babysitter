@@ -52,11 +52,23 @@ test('Given family B when get rates then $16 per hour after 12:00 AM', () => {
 test('Given family C when get rates then $21 per hour before 9:00 PM', () => {
   const rates = getRatesForFamily('C');
 
-  expect(rates).to.deep.include({ hour: 17, rate: 21});
-  expect(rates).to.deep.include({ hour: 18, rate: 21});
-  expect(rates).to.deep.include({ hour: 19, rate: 21});
-  expect(rates).to.deep.include({ hour: 20, rate: 21});
-})
+  expect(rates).to.deep.include({hour: 17, rate: 21});
+  expect(rates).to.deep.include({hour: 18, rate: 21});
+  expect(rates).to.deep.include({hour: 19, rate: 21});
+  expect(rates).to.deep.include({hour: 20, rate: 21});
+});
+
+test('Given family C when get rates then $15 per hour after 9:00 PM', () => {
+  const rates = getRatesForFamily('C');
+
+  expect(rates).to.deep.include({hour: 21, rate: 15});
+  expect(rates).to.deep.include({hour: 22, rate: 15});
+  expect(rates).to.deep.include({hour: 23, rate: 15});
+  expect(rates).to.deep.include({hour: 0, rate: 15});
+  expect(rates).to.deep.include({hour: 1, rate: 15});
+  expect(rates).to.deep.include({hour: 2, rate: 15});
+  expect(rates).to.deep.include({hour: 3, rate: 15});
+});
 
 test('Given unknown family when get rates then returns default rates', () => {
   const rates = getRatesForFamily('Other');

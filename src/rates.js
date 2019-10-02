@@ -30,6 +30,13 @@ const knownFamilies = {
     {hour: 18, rate: 21},
     {hour: 19, rate: 21},
     {hour: 20, rate: 21},
+    {hour: 21, rate: 15},
+    {hour: 22, rate: 15},
+    {hour: 23, rate: 15},
+    {hour: 0, rate: 15},
+    {hour: 1, rate: 15},
+    {hour: 2, rate: 15},
+    {hour: 3, rate: 15},
   ]
 };
 
